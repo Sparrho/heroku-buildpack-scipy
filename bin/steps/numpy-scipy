@@ -81,6 +81,13 @@ if (grep -iq -e "numpy" -e "scipy" $REQ_TXT) then
       fi
     fi
   fi
+  
+  # Set the variables for the future
+  set-env BLAS $(pwd)/vendor/lib/atlas-base/atlas/libblas.a
+  set-env LAPACK $(pwd)/vendor/lib/atlas-base/atlas/liblapack.a
+  set-env ATLAS $(pwd)/vendor/lib/atlas-base/libatlas.a
+  set-env LIBRARY_PATH $(pwd)/vendor/lib:$(pwd)/vendor/lib/atlas-base:$(pwd)/vendor/lib/atlas-base/atlas:$LIBRARY_PATH
+  set-env LD_LIBRARY_PATH $(pwd)/vendor/lib:$(pwd)/vendor/lib/atlas-base:$(pwd)/vendor/lib/atlas-base/atlas:$LD_LIBRARY_PATH
 
   # Move everything from venv directory to python directory
   if [ -d "venv" ]; then

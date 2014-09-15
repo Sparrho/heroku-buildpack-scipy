@@ -51,5 +51,5 @@ Demo
 Acknowledgments
 ---------------
 
-This fork is taken from @thenovices and @dbrgn -- I owe thanks to him, @wyn, and others for
+This fork is taken from @thenovices and @dbrgn -- I owe thanks to them, @wyn, and others for
 setting up a lot of the code here.
